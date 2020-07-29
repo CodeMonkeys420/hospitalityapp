@@ -43,7 +43,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('newasset1.jpg'),
+          image: NetworkImage('https://lh3.googleusercontent.com/Kqni3QLq83kba-vJUrqN6l06Lu1aAKjlC07L01F3GTPp9ZD5wQcRNaSSI7sjLO5kiA'),
           fit: BoxFit.cover,
         ),
       ),
@@ -93,7 +93,7 @@ class _SignInState extends State<SignIn> {
                                 TextFormField(
                                       decoration: InputDecoration(
                                       labelText: "Enter Email",
-                                      fillColor: Colors.white,
+                                      fillColor: Colors.transparent,
                                       border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(25.0),
                                       borderSide: BorderSide(
