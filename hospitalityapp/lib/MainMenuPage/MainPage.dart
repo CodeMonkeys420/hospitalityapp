@@ -10,8 +10,8 @@ void main() {
 }
 
 final ThemeData themeData = ThemeData(
-//  canvasColor: Colors.deepOrange,
-//  accentColor: Colors.grey,
+  canvasColor: Colors.white,
+  accentColor: Colors.grey,
 );
 
 class MainPageClass extends StatelessWidget {

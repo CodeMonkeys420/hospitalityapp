@@ -21,4 +21,5 @@ flutter:
 
   assets:
    - lib/assets/images/appbg.jpg
+   - lib/appbg1.jpg
 

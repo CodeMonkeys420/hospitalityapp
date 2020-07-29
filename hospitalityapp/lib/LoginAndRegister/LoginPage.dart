@@ -43,7 +43,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       decoration: new BoxDecoration(
         image: new DecorationImage(
-          image: new AssetImage("appbg.jpg"),
+          image: new AssetImage("appbg1.jpg"),
           fit: BoxFit.fill,
         ),
       ),
@@ -75,7 +75,7 @@ class _SignInState extends State<SignIn> {
 //              key: _formkey,
               child: Column(
                 children: <Widget>[
-                  Image.asset(''),
+                  Image.asset('appbg1.jpg'),
                       Material(
                         child: new Container (
                           padding: const EdgeInsets.all(30.0),
@@ -87,7 +87,7 @@ class _SignInState extends State<SignIn> {
 
                                     Padding(padding: EdgeInsets.only(top: 140.0)),
                                         Text('Login to The Hospitality App',
-                                        style: TextStyle(color: hexToColor("#af0000"), fontSize: 25.0),),
+                                        style: TextStyle(color: hexToColor("#00000000"), fontSize: 25.0),),
                                         Padding(padding: EdgeInsets.only(top: 50.0)
                                     ),
 
