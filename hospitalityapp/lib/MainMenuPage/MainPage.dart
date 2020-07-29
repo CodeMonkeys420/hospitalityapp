@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
+import 'package:nice_button/nice_button.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,67 +16,141 @@ final ThemeData themeData = ThemeData(
 
 class MainPageClass extends StatelessWidget {
   @override
-  Widget build(BuildContext ctx) {
+  Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.blue[400],
+        elevation: 1.0,
+        title: Text('Sign in to Hospitality App'),
+        actions: <Widget>[
+          FlatButton.icon(
+            icon: Icon(Icons.home),
+            label: Text(''),
+            onPressed: () {
+//                widget.toggleView();
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainPageClass()),
+              );
+            },
+          ),
+
+        ],
+      ),
       body: Center(
-        child: FlatButton(
-          onPressed: (){
-            Navigator.push(ctx, PageTwo());
-          },
-          child: Text("Go to Page Two"),
-        ),
+         child: Column(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+
+                  text: "Activities Page",
+                 // icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        ActivitiesPage()
+                    );
+                  },
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+                  text: "Restuatants Page",
+                 // icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        RestuatantsPage()
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+                  text: "Spa Page",
+//                icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        SpaPage()
+                    );
+                  },
+                ),
+              ),
+            ],
+          )
       ),
     );
   }
 }
 
-class PageTwo extends MaterialPageRoute<Null> {
-  PageTwo() : super(builder: (BuildContext ctx) {
+class ActivitiesPage extends MaterialPageRoute<Null> {
+  ActivitiesPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(ctx).canvasColor,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
-        child: RaisedButton(
+        child: MaterialButton(
           onPressed: () {
-            Navigator.push(
-                ctx,
-                PageThree()
-            );
+
           },
-          child: Text("Go to Page Three"),
+          child: Text("Activities Page"),
         ),
       ),
     );
   });
 }
 
-class PageThree extends MaterialPageRoute<Null> {
-  PageThree() : super(builder: (BuildContext ctx) {
+class RestuatantsPage extends MaterialPageRoute<Null> {
+  RestuatantsPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Last Page!"),
-        backgroundColor: Theme.of(ctx).accentColor,
-        elevation: 2.0,
-        actions: <Widget>[
-          IconButton(
-            icon: Icon(Icons.close),
-            onPressed: (){
-              Navigator.pop(ctx);
-            },
-          )
-        ],
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 1.0,
       ),
       body: Center(
         child: MaterialButton(
-          onPressed: (){
-            Navigator.popUntil(ctx, ModalRoute.withName(Navigator.defaultRouteName));
+          onPressed: () {
+
           },
-          child: Text("Go Home!"),
+          child: Text("Restuarants Page"),
         ),
       ),
     );
   });
 
 }
+
+class SpaPage extends MaterialPageRoute<Null> {
+  SpaPage() : super(builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 1.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          onPressed: () {
+
+          },
+          child: Text("Spa Page"),
+        ),
+      ),
+    );
+  });
+}
+
