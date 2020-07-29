@@ -41,10 +41,10 @@ class _SignInState extends State<SignIn> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: new BoxDecoration(
-        image: new DecorationImage(
-          image: new AssetImage("appbg1.jpg"),
-          fit: BoxFit.fill,
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('newasset1.jpg'),
+          fit: BoxFit.cover,
         ),
       ),
       child: Scaffold(
@@ -75,7 +75,6 @@ class _SignInState extends State<SignIn> {
 //              key: _formkey,
               child: Column(
                 children: <Widget>[
-                  Image.asset('appbg1.jpg'),
                       Material(
                         child: new Container (
                           padding: const EdgeInsets.all(30.0),
