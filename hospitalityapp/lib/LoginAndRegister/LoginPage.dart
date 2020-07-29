@@ -14,6 +14,10 @@ class SignIn extends StatefulWidget {
   _SignInState createState() => _SignInState();
 }
 
+Color hexToColor(String code) {
+  return new Color(int.parse(code.substring(1, 7), radix: 16) + 0xFF000000);
+}
+
 class _SignInState extends State<SignIn> {
 
 //  final AuthService _auth = AuthService();
@@ -39,7 +43,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       decoration: new BoxDecoration(
         image: new DecorationImage(
-          image: new AssetImage(""),
+          image: new AssetImage("appbg.jpg"),
           fit: BoxFit.fill,
         ),
       ),
@@ -72,28 +76,93 @@ class _SignInState extends State<SignIn> {
               child: Column(
                 children: <Widget>[
                   Image.asset(''),
-                  SizedBox(height: 20.0,),
-                  TextFormField(
-                      decoration: InputDecoration(hintText: 'Email',),
+                      Material(
+                        child: new Container (
+                          padding: const EdgeInsets.all(30.0),
+                           color: Colors.white,
+                         child: new Container(
+                          child: new Center(
+                            child: new Column(
+                                children : [
 
-                      validator: (val) => val.isEmpty ? 'Enter a email' : null,
-                      onChanged: (val) {
+                                    Padding(padding: EdgeInsets.only(top: 140.0)),
+                                        Text('Login to The Hospitality App',
+                                        style: TextStyle(color: hexToColor("#af0000"), fontSize: 25.0),),
+                                        Padding(padding: EdgeInsets.only(top: 50.0)
+                                    ),
 
-                        setState(() => email = val);
-                      }
+                                TextFormField(
+                                      decoration: InputDecoration(
+                                      labelText: "Enter Email",
+                                      fillColor: Colors.white,
+                                      border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(25.0),
+                                      borderSide: BorderSide(
+                                      ),
+                                      ),
+                                      //fillColor: Colors.green
+                                      ),
+                                      validator: (val) {
+                                      if(val.length==0) {
+                                      return "Email cannot be empty";
+                                      }else{
+                                      return null;
+                                      }
+                                      },
+                                      keyboardType: TextInputType.emailAddress,
+                                      style: TextStyle(
+                                      fontFamily: "Poppins",
+                                      ),
+                                ),
+                                  Padding(
+                                    padding: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                                    child: TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: "Enter Password",
+                                        fillColor: Colors.white,
+                                        border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(25.0),
+                                          borderSide: BorderSide(
+                                          ),
+                                        ),
+                                        //fillColor: Colors.green
+                                      ),
+                                      validator: (val) {
+                                        if(val.length==0) {
+                                          return "Password cannot be empty";
+                                        }else{
+                                          return null;
+                                        }
+                                      },
+                                      keyboardType: TextInputType.visiblePassword,
+                                      style: TextStyle(
+                                        fontFamily: "Poppins",
+                                      ),
+                                    ),
+                                  ),
+                                ]
+                               ),
+                            ),
+                         ),
+                       ),
+                      ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                    child: NiceButton(
+                      radius: 40,
+                      padding: const EdgeInsets.all(15),
+                      text: "Sign In",
+//                icon: Icons.account_box,
+                      gradientColors: [secondColor, firstColor],
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MainPageClass()),
+                        );
+                      },
+                    ),
                   ),
-                  SizedBox(height: 20.0,),
-                  TextFormField(
-                      obscureText: true,
-                      decoration: InputDecoration(hintText: 'Password',),
-                      validator: (val) => val.length <6 ? 'Enter a password' : null,
-                      onChanged: (val) {
-                        setState(() => password = val);
-                      }
-                  ),
-                  SizedBox(height: 20.0,),
-
-                  RaisedButton(
+/*                  RaisedButton(
                     color: Colors.red[500],
                     child: Text(
                         'Sign in',
@@ -118,7 +187,7 @@ class _SignInState extends State<SignIn> {
                         MaterialPageRoute(builder: (context) => MainPageClass()),
                       );
                     },
-                  ),
+                  ),*/
                   SizedBox(height: 20),
                   Text(
                     error,

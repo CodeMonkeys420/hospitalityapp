@@ -10,8 +10,8 @@ void main() {
 }
 
 final ThemeData themeData = ThemeData(
-  canvasColor: Colors.deepOrange,
-  accentColor: Colors.grey,
+//  canvasColor: Colors.deepOrange,
+//  accentColor: Colors.grey,
 );
 
 class MainPageClass extends StatelessWidget {
@@ -89,6 +89,38 @@ class MainPageClass extends StatelessWidget {
                   },
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+                  text: "Promotions Page",
+//                icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        PromotionPage()
+                    );
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+                child: NiceButton(
+                  radius: 40,
+                  padding: const EdgeInsets.all(15),
+                  text: "Test Page",
+                  // icon: Icons.account_box,
+                  gradientColors: [secondColor, firstColor],
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        TestPage()
+                    );
+                  },
+                ),
+              ),
             ],
           )
       ),
@@ -104,12 +136,33 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
         elevation: 1.0,
       ),
       body: Center(
-        child: MaterialButton(
-          onPressed: () {
+          child: Column(
+            children: <Widget>[
 
-          },
-          child: Text("Activities Page"),
-        ),
+              new Card(
+                child: new Container(
+                  padding: new EdgeInsets.all(32.0),
+                  child: new Column(
+                    children: <Widget>[
+                      new Text('Hello World'),
+                      new Text('How are you?')
+                    ],
+                  ),
+                ),
+              ),
+              new Card(
+                child: new Container(
+                  padding: new EdgeInsets.all(32.0),
+                  child: new Column(
+                    children: <Widget>[
+                      new Text('Hello World'),
+                      new Text('How are you?')
+                    ],
+                  ),
+                ),
+              )
+            ],
+          )
       ),
     );
   });
@@ -153,4 +206,43 @@ class SpaPage extends MaterialPageRoute<Null> {
     );
   });
 }
+
+class PromotionPage extends MaterialPageRoute<Null> {
+  PromotionPage() : super(builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 1.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          onPressed: () {
+
+          },
+          child: Text("Activities Page"),
+        ),
+      ),
+    );
+  });
+}
+
+class TestPage extends MaterialPageRoute<Null> {
+  TestPage() : super(builder: (BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).canvasColor,
+        elevation: 1.0,
+      ),
+      body: Center(
+        child: MaterialButton(
+          onPressed: () {
+
+          },
+          child: Text("Activities Page"),
+        ),
+      ),
+    );
+  });
+}
+
 
