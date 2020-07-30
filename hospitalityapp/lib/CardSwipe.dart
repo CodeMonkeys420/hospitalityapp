@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import 'MainMenuPage/MainPage.dart';
+
 //void main() => runApp(new MyApp());
 
 class CardSwipeClass extends StatelessWidget {
@@ -90,9 +92,25 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.arrow_back),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainPageClass()),
+              );
+            },
+          ),
+        ],
+        backgroundColor: Colors.deepPurple,
+        elevation: 1.0,
+        title: const Text('Activities'),
+      ),
       key: scfldKey,
       body: AnimatedContainer(
-        padding: EdgeInsets.only(top: 50.0),
+        padding: EdgeInsets.only(top: 20.0,bottom: 20),
         duration: Duration(milliseconds: 1000),
         curve: Curves.ease,
         color: clr,
