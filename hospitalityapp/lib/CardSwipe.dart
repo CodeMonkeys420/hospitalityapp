@@ -36,7 +36,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
       'color': Colors.orange,
       'price': '',
       'disc':
-      'Oranges are low in calories and full of nutrients, they promote clear, healthy, skin and can help to lower our risk for many diseases as part of an overall healthy and varied diet.',
+      'Spur Corporation is a steakhouse franchise restaurant chain originating from South Africa with a focus on family dining. The head office of Spur Corporation is situated in Century City, Cape Town.',
     },
     {
       'name': 'Steers',
@@ -44,7 +44,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
       'color': Colors.green,
       'price': '',
       'disc':
-      'Pears are a mild, sweet fruit with a fibrous center. They are rich in important antioxidants, flavonoids, and dietary fiber and pack all of these nutrients in a fat-free, cholesterol-free, 100-calorie package.',
+      'Long-running counter-serve chain known for flame-grilled beef burgers and thick, handmade chips.',
     },
     {
       'name': 'KFC',
@@ -52,7 +52,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
       'color': Colors.red,
       'price': '',
       'disc':
-      'A tomato is a nutrient-dense superfood that offers benefit to a range of bodily systems. Its nutritional content supports healthful skin, weight loss, and heart health.',
+      'KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. It is the worlds second-largest restaurant chain after McDonalds, with 22,621 locations globally in 150 countries as of December 2019. The chain is a subsidiary of Yum!',
     },
   ];
   Color clr = Colors.orange;
