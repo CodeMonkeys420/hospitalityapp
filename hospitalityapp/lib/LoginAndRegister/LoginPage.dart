@@ -4,7 +4,7 @@ import 'package:hospitalityapp/MainMenuPage/MainPage.dart';
 import 'package:nice_button/nice_button.dart';
 
 import 'RegisterPage.dart';
-var firstColor = Color(0xff5b86e5), secondColor = Color(0xff36d1dc);
+var firstColor = Color(0xffF263FD), secondColor = Color(0xff1B2CF8);
 class SignIn extends StatefulWidget {
 
   final Function toggleView;
@@ -49,24 +49,24 @@ class _SignInState extends State<SignIn> {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(backgroundColor: Colors.blue[400],
-          elevation: 1.0,
-          title: Text('Sign in to Hospitality App'),
-          actions: <Widget>[
-            FlatButton.icon(
-              icon: Icon(Icons.home),
-              label: Text(''),
-              onPressed: () {
-//                widget.toggleView();
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegisterClass()),
-                );
-              },
-            ),
-
-          ],
-        ),
+//        appBar: AppBar(backgroundColor: Colors.blue[400],
+//          elevation: 1.0,
+//          title: Text('Sign in to Hospitality App'),
+//          actions: <Widget>[
+//            FlatButton.icon(
+//              icon: Icon(Icons.home),
+//              label: Text(''),
+//              onPressed: () {
+////                widget.toggleView();
+//                Navigator.push(
+//                  context,
+//                  MaterialPageRoute(builder: (context) => RegisterClass()),
+//                );
+//              },
+//            ),
+//
+//          ],
+//        ),
         body: SingleChildScrollView(
           padding: const EdgeInsets.all(10.0),
           child: Container(
@@ -78,7 +78,7 @@ class _SignInState extends State<SignIn> {
                       Material(
                         child: new Container (
                           padding: const EdgeInsets.all(30.0),
-                           color: Colors.white,
+                           color: Colors.transparent,
                          child: new Container(
                           child: new Center(
                             child: new Column(
@@ -86,14 +86,14 @@ class _SignInState extends State<SignIn> {
 
                                     Padding(padding: EdgeInsets.only(top: 140.0)),
                                         Text('Login to The Hospitality App',
-                                        style: TextStyle(color: hexToColor("#00000000"), fontSize: 25.0),),
+                                        style: TextStyle(color: hexToColor("#ffffff"), fontSize: 25.0),),
                                         Padding(padding: EdgeInsets.only(top: 50.0)
                                     ),
 
                                 TextFormField(
                                       decoration: InputDecoration(
                                       labelText: "Enter Email",
-                                      fillColor: Colors.transparent,
+                                      fillColor: Colors.white,
                                       border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(25.0),
                                       borderSide: BorderSide(
@@ -111,6 +111,8 @@ class _SignInState extends State<SignIn> {
                                       keyboardType: TextInputType.emailAddress,
                                       style: TextStyle(
                                       fontFamily: "Poppins",
+                                        color: Colors.white,
+                                        //backgroundColor: Colors.white,
                                       ),
                                 ),
                                   Padding(
@@ -136,6 +138,7 @@ class _SignInState extends State<SignIn> {
                                       keyboardType: TextInputType.visiblePassword,
                                       style: TextStyle(
                                         fontFamily: "Poppins",
+                                        color: Colors.white,
                                       ),
                                     ),
                                   ),

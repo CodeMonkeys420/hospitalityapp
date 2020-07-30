@@ -9,6 +9,6 @@ void main() {
 }
 
 final ThemeData themeData = ThemeData(
-  canvasColor: Colors.white,
-  accentColor: Colors.grey,
+  canvasColor: Colors.transparent,
+  accentColor: Colors.white,
 );
