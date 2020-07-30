@@ -3,8 +3,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
 import 'package:nice_button/nice_button.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
 import '../CardSwipe.dart';
+import '../SpaPage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -58,8 +59,8 @@ class MainPageClass extends StatelessWidget {
                   gradientColors: [secondColor, firstColor],
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        RestuatantsPage()
+                      context,
+                      MaterialPageRoute(builder: (context) => CardSwipeClass()),//restuarant
                     );
                   },
                 ),
@@ -74,8 +75,8 @@ class MainPageClass extends StatelessWidget {
                   gradientColors: [secondColor, firstColor],
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        SpaPage()
+                      context,
+                      MaterialPageRoute(builder: (context) => SpaPage()),
                     );
                   },
                 ),
@@ -101,7 +102,7 @@ class MainPageClass extends StatelessWidget {
                 child: NiceButton(
                   radius: 40,
                   padding: const EdgeInsets.all(15),
-                  text: "Test Page",
+                  text: "Accommodation",
                   // icon: Icons.account_box,
                   gradientColors: [secondColor, firstColor],
                   onPressed: () {
@@ -211,126 +212,126 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
   });
 }
 
-class RestuatantsPage extends MaterialPageRoute<Null> {
-  RestuatantsPage() : super(builder: (BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.deepPurple,
-          elevation: 1.0,
-          title: const Text('Restuarants'),
-        ),
-        body:SingleChildScrollView( child: Center(
-            child: Column(
-                children: <Widget>[
+//class RestuatantsPage extends MaterialPageRoute<Null> {
+//  RestuatantsPage() : super(builder: (BuildContext context) {
+//    return Scaffold(
+//        appBar: AppBar(
+//          backgroundColor: Colors.deepPurple,
+//          elevation: 1.0,
+//          title: const Text('Restuarants'),
+//        ),
+//        body:SingleChildScrollView( child: Center(
+//            child: Column(
+//                children: <Widget>[
+//
+//                  Card(
+//                    child: Column(
+//                      mainAxisSize: MainAxisSize.min,
+//                      children: <Widget>[
+//                        new ListTile(
+//                          leading:SizedBox( //having an image first before text on cards
+//                            height: 200.0,
+//                            width: 150.0, // fixed width and height
+//                            child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
+//                          ),
+//                          title: Text('Resturuant Name'),
+//                          subtitle: Text('Description of the place'),
+//                        ),
+//                        ButtonBar(
+//                          children: <Widget>[
+//                            FlatButton(
+//                              child: const Text('Book'),
+//                              onPressed: () {/* ... */},
+//                            ),
+//
+//                          ],
+//                        ),
+//                      ],
+//                    ),
+//                  ),
+//                  Card(
+//                    child: Column(
+//                      mainAxisSize: MainAxisSize.min,
+//                      children: <Widget>[
+//                        new ListTile(
+//                          leading:SizedBox( //having an image first before text on cards
+//                            height: 200.0,
+//                            width: 150.0, // fixed width and height
+//                            child: Image.network('https://vignette.wikia.nocookie.net/mua/images/f/fa/MUA3_Black_Panther.png/revision/latest?cb=20190622013215'),
+//                          ),
+//                          title: Text('Resturuant Name'),
+//                          subtitle: Text('Description of the place'),
+//                        ),
+//                        ButtonBar(
+//                          children: <Widget>[
+//                            FlatButton(
+//                              child: const Text('Book'),
+//                              onPressed: () {/* ... */},
+//                            ),
+//
+//                          ],
+//                        ),
+//                      ],
+//                    ),
+//                  ),
+//                  Card(
+//                    child: Column(
+//                      mainAxisSize: MainAxisSize.min,
+//                      children: <Widget>[
+//                        new ListTile(
+//                          leading:SizedBox( //having an image first before text on cards
+////                        height: 200.0,
+////                        width: 150.0, // fixed width and height
+//                            child: Image.network('https://i.pinimg.com/originals/2b/32/11/2b32119a2f1c7623e4ca3e976cbd3efc.jpg'),
+//                          ),
+//                          title: Text('Resturuant Name'),
+//                          subtitle: Text('Description of the place'),
+//                        ),
+//                        ButtonBar(
+//                          children: <Widget>[
+//                            FlatButton(
+//                              child: const Text('Book'),
+//                              onPressed: () {/* ... */},
+//                            ),
+//
+//                          ],
+//                        ),
+//                      ],
+//                    ),
+//                  ),
+//                ] )))
+//    );
+//  });
+//
+//}
 
-                  Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
-                            height: 200.0,
-                            width: 150.0, // fixed width and height
-                            child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {/* ... */},
-                            ),
-
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
-                            height: 200.0,
-                            width: 150.0, // fixed width and height
-                            child: Image.network('https://vignette.wikia.nocookie.net/mua/images/f/fa/MUA3_Black_Panther.png/revision/latest?cb=20190622013215'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {/* ... */},
-                            ),
-
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
-//                        height: 200.0,
-//                        width: 150.0, // fixed width and height
-                            child: Image.network('https://i.pinimg.com/originals/2b/32/11/2b32119a2f1c7623e4ca3e976cbd3efc.jpg'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {/* ... */},
-                            ),
-
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ] )))
-    );
-  });
-
-}
-
-class SpaPage extends MaterialPageRoute<Null> {
-  SpaPage() : super(builder: (BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).canvasColor,
-        elevation: 1.0,
-      ),
-      body:
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
-              ),
-              Expanded(
-                flex: 2,
-                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
-              ),
-              Expanded(
-                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
-              ),
-            ],
-          ),
-      //),
-    );
-  });
-}
+//class SpaPage extends MaterialPageRoute<Null> {
+//  SpaPage() : super(builder: (BuildContext context) {
+//    return Scaffold(
+//      appBar: AppBar(
+//        backgroundColor: Theme.of(context).canvasColor,
+//        elevation: 1.0,
+//      ),
+//      body:
+//          Row(
+//            crossAxisAlignment: CrossAxisAlignment.center,
+//            children: [
+//              Expanded(
+//                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
+//              ),
+//              Expanded(
+//                flex: 2,
+//                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
+//              ),
+//              Expanded(
+//                child: Image.network('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80'),
+//              ),
+//            ],
+//          ),
+//      //),
+//    );
+//  });
+//}
 
 class PromotionPage extends MaterialPageRoute<Null> {
   PromotionPage() : super(builder: (BuildContext context) {

@@ -32,7 +32,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
   List<Map<String, dynamic>> fruits = [
     {
       'name': 'Spur',
-      'image': 'assets/RedDot_Burger.jpg',
+      'image': 'assets/spur.jpg',
       'color': Colors.orange,
       'price': '',
       'disc':
@@ -40,7 +40,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
     },
     {
       'name': 'Steers',
-      'image': 'assets/RedDot_Burger.jpg',
+      'image': 'assets/steers.jpg',
       'color': Colors.green,
       'price': '',
       'disc':
@@ -48,7 +48,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
     },
     {
       'name': 'KFC',
-      'image': 'assets/RedDot_Burger.jpg',
+      'image': 'assets/kfc.jpg',
       'color': Colors.red,
       'price': '',
       'disc':
@@ -202,7 +202,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
                       '${fruits[index]['image']}',
                       height: 240.0,
                       width: 240.0,
-                      fit: BoxFit.contain,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ],
