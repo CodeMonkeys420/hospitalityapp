@@ -136,7 +136,7 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
         backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
-      body: Center(
+      body:SingleChildScrollView( child: Center(
           child: Column(
             children: <Widget>[
 
@@ -165,7 +165,7 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
           ],
         ),
       ),
-             ] ))
+             ] )))
     );
   });
 }
