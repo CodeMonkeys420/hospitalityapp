@@ -5,6 +5,7 @@ import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import '../CardSwipe.dart';
+import '../PromotionsPage.dart';
 import '../SpaPage.dart';
 
 void main() {
@@ -132,7 +133,9 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
           child: Column(
             children: <Widget>[
 
-                  Card(
+              Card(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15.0)),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -158,6 +161,8 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
                 ),
               ),
               Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -183,6 +188,8 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
                 ),
               ),
               Card(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15.0)),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[

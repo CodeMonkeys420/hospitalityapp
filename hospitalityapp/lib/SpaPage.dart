@@ -93,9 +93,15 @@ class _SpaPageClassState extends State<SpaPageClass> {
                       aspectRatio:
                       16 / 9, //if height is not specified, then this value is used
                     ),
-                    Container(
-
-                    ),
+                    const Text.rich(
+                      TextSpan(
+                        text: 'Hello', // default text style
+                        children: <TextSpan>[
+                          TextSpan(text: ' beautiful ', style: TextStyle(fontStyle: FontStyle.italic)),
+                          TextSpan(text: 'person', style: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    )
                   ]
               ),
             )
