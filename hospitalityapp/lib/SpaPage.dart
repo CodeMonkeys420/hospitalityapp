@@ -59,7 +59,7 @@ class _SpaPageClassState extends State<SpaPageClass> {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    CarouselSlider(
+                    CarouselSlider( 
                       height: 400.0,
                       items: imageLinks.map((imageLink) {
                         return Builder(
@@ -91,7 +91,7 @@ class _SpaPageClassState extends State<SpaPageClass> {
                       viewportFraction: 0.8,
                       enlargeCenterPage: true, //is false by default
                       aspectRatio:
-                      16 / 9, //if height is not specified, then this value is used
+                      16 / 9, //if height is not specifie //d, then this value is used
                     ),
                     Container(
 

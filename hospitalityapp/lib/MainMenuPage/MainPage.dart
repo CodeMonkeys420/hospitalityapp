@@ -132,7 +132,12 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
           child: Column(
             children: <Widget>[
 
-                  Card(
+new GestureDetector(
+  onTap: (){
+//more details page gets called here
+
+  },
+  child: new Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -155,9 +160,14 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
                       ],
                     ),
                   ],
-                ),
-              ),
-              Card(
+                ),),
+),
+               new GestureDetector(
+  onTap: (){
+
+//more details page gets called here
+  },
+  child: new   Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -182,7 +192,14 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
                   ],
                 ),
               ),
-              Card(
+),
+           new GestureDetector(
+  onTap: () 
+  {
+//more details page gets called here
+
+  },
+  child: new   Card(
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -207,6 +224,8 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
                   ],
                 ),
               ),
+), 
+            
              ] )))
     );
   });
