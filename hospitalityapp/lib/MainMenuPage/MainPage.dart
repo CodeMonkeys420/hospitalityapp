@@ -17,38 +17,31 @@ final ThemeData themeData = ThemeData(
 class MainPageClass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-
-//      appBar: AppBar(backgroundColor: Colors.blue[400],
-//        elevation: 1.0,
-//        title: Text('Sign in to Hospitality App'),
-//        actions: <Widget>[
-//          FlatButton.icon(
-//            icon: Icon(Icons.home),
-//            label: Text(''),
-//            onPressed: () {
-////                widget.toggleView();
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(builder: (context) => MainPageClass()),
-//              );
-//            },
-//          ),
-//
-//        ],
-//      ),
-      //body: Center(
-        child: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage('https://steamuserimages-a.akamaihd.net/ugc/156901025173326532/09F6B5B143003D0BBE3E3D59A3BD0AD2BFA7D7A2/'),
-              fit: BoxFit.cover,
-            ),
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.blue[400],
+        elevation: 1.0,
+        title: Text('Sign in to Hospitality App'),
+        
+        actions: <Widget>[
+          FlatButton.icon(
+            icon: Icon(Icons.home),
+            label: Text(''),
+            onPressed: () {
+//                widget.toggleView();
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MainPageClass()),
+              );
+            },
           ),
+
+        ],
+      ),
+      body: Center(
          child: Column(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.fromLTRB(8, 198, 8, 0),
+                padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                 child: NiceButton(
                   radius: 40,
                   padding: const EdgeInsets.all(15),
@@ -130,9 +123,8 @@ class MainPageClass extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-        )
-     // ),
+          )
+      ),
     );
   }
 }
@@ -141,38 +133,39 @@ class ActivitiesPage extends MaterialPageRoute<Null> {
   ActivitiesPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
           child: Column(
             children: <Widget>[
 
-              new Card(
-                child: new Container(
-                  padding: new EdgeInsets.all(32.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Text('Hello World'),
-                      new Text('How are you?')
-                    ],
-                  ),
+              Card(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            new ListTile(
+              leading:SizedBox( //having an image first before text on cards
+  height: 100.0,
+  width: 100.0, // fixed width and height
+  child: Image.asset('newasset1.jpg')
+),
+              title: Text('Resturuant Name'),
+              subtitle: Text('Description of the place'),
+            ),
+            ButtonBar(
+              children: <Widget>[
+                FlatButton(
+                  child: const Text('Book'),
+                  onPressed: () {/* ... */},
                 ),
-              ),
-              new Card(
-                child: new Container(
-                  padding: new EdgeInsets.all(32.0),
-                  child: new Column(
-                    children: <Widget>[
-                      new Text('Hello World'),
-                      new Text('How are you?')
-                    ],
-                  ),
-                ),
-              )
-            ],
-          )
+               
+              ],
+            ),
+          ],
+        ),
       ),
+             ] ))
     );
   });
 }
@@ -181,7 +174,7 @@ class RestuatantsPage extends MaterialPageRoute<Null> {
   RestuatantsPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
@@ -201,7 +194,7 @@ class SpaPage extends MaterialPageRoute<Null> {
   SpaPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
@@ -220,7 +213,7 @@ class PromotionPage extends MaterialPageRoute<Null> {
   PromotionPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
@@ -228,7 +221,7 @@ class PromotionPage extends MaterialPageRoute<Null> {
           onPressed: () {
 
           },
-          child: Text("Promotion Page"),
+          child: Text("Activities Page"),
         ),
       ),
     );
@@ -239,7 +232,7 @@ class TestPage extends MaterialPageRoute<Null> {
   TestPage() : super(builder: (BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Theme.of(context).canvasColor,
         elevation: 1.0,
       ),
       body: Center(
@@ -247,7 +240,7 @@ class TestPage extends MaterialPageRoute<Null> {
           onPressed: () {
 
           },
-          child: Text("Test Page"),
+          child: Text("Activities Page"),
         ),
       ),
     );
