@@ -3,59 +3,58 @@ import 'package:flutter/rendering.dart';
 
 import 'MainMenuPage/MainPage.dart';
 
-//void main() => runApp(new MyApp());
 
-class CardSwipeClass extends StatelessWidget {
+class GeneratedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Generated Page',
       theme: new ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: new CardSwipePage(title: 'Flutter Demo Home Page'),
+      home: new RestuarantPageClass(title: 'Generated Page'),
     );
   }
 }
 
-class CardSwipePage extends StatefulWidget {
-  CardSwipePage({Key key, this.title}) : super(key: key);
+class RestuarantPageClass extends StatefulWidget {
+  RestuarantPageClass({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _CardSwipePageState createState() => new _CardSwipePageState();
+  _RestuarantPageClassState createState() => new _RestuarantPageClassState();
 }
 
-class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateMixin {
+class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerProviderStateMixin {
   PageController pageViewController;
   String str;
   GlobalKey<ScaffoldState> scfldKey = new GlobalKey<ScaffoldState>();
   List<Map<String, dynamic>> fruits = [
     {
-      'name': 'Spur',
-      'image': 'assets/spur.jpg',
+      'name': 'Chilly Burger',
+      'image': 'assets/RedDot_Burger.jpg',
       'color': Colors.orange,
       'price': '',
       'disc':
       'Spur Corporation is a steakhouse franchise restaurant chain originating from South Africa with a focus on family dining. The head office of Spur Corporation is situated in Century City, Cape Town.',
     },
-    {
-      'name': 'Steers',
-      'image': 'assets/steers.jpg',
-      'color': Colors.green,
-      'price': '',
-      'disc':
-      'Long-running counter-serve chain known for flame-grilled beef burgers and thick, handmade chips.',
-    },
-    {
-      'name': 'KFC',
-      'image': 'assets/kfc.jpg',
-      'color': Colors.red,
-      'price': '',
-      'disc':
-      'KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. It is the worlds second-largest restaurant chain after McDonalds, with 22,621 locations globally in 150 countries as of December 2019. The chain is a subsidiary of Yum!',
-    },
+//    {
+//      'name': 'Steers',
+//      'image': 'assets/steers.jpg',
+//      'color': Colors.green,
+//      'price': '',
+//      'disc':
+//      'Long-running counter-serve chain known for flame-grilled beef burgers and thick, handmade chips.',
+//    },
+//    {
+//      'name': 'KFC',
+//      'image': 'assets/kfc.jpg',
+//      'color': Colors.red,
+//      'price': '',
+//      'disc':
+//      'KFC is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken. It is the worlds second-largest restaurant chain after McDonalds, with 22,621 locations globally in 150 countries as of December 2019. The chain is a subsidiary of Yum!',
+//    },
   ];
   Color clr = Colors.orange;
   var pos = 20.0;
@@ -106,7 +105,7 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
         ],
         backgroundColor: Colors.deepPurple,
         elevation: 1.0,
-        title: const Text('Activities'),
+        title: const Text('Generated Page'),
       ),
       key: scfldKey,
       body: AnimatedContainer(
@@ -190,31 +189,31 @@ class _CardSwipePageState extends State<CardSwipePage> with TickerProviderStateM
                             ),
                           ),
                         ),
-                        Positioned(
-                          left: index != currentPage
-                              ? getMappedValue(20.0, 100.0, 160.0, 20.0, pos)
-                              : getMappedValue(20.0, 100.0, 20.0, -120.0, pos),
-                          bottom: 20.0,
-                          child: Opacity(
-                            opacity: index != currentPage
-                                ? getMappedValue(20.0, 100.0, 0.0, 0.4, pos)
-                                : getMappedValue(20.0, 100.0, 0.4, 00.0, pos),
-                            child: Text(
-                              '${fruits[index]['name']}',
-                              maxLines: 1,
-                              softWrap: true,
-                              style: TextStyle(
-                                  fontSize: 130.0, fontWeight: FontWeight.w900),
-                            ),
-                          ),
-                        ),
+//                        Positioned(
+//                          left: index != currentPage
+//                              ? getMappedValue(20.0, 100.0, 160.0, 20.0, pos)
+//                              : getMappedValue(20.0, 100.0, 20.0, -120.0, pos),
+//                          bottom: 20.0,
+//                          child: Opacity(
+//                            opacity: index != currentPage
+//                                ? getMappedValue(20.0, 100.0, 0.0, 0.4, pos)
+//                                : getMappedValue(20.0, 100.0, 0.4, 00.0, pos),
+//                            child: Text(
+//                              '${fruits[index]['name']}',
+//                              maxLines: 1,
+//                              softWrap: true,
+//                              style: TextStyle(
+//                                  fontSize: 130.0, fontWeight: FontWeight.w900),
+//                            ),
+//                          ),
+//                        ),
                       ],
                     ),
                   ),
                   Positioned(
                     right: index != currentPage
-                        ? getMappedValue(20.0, 100.0, -120.0, -10.0, pos)
-                        : getMappedValue(20.0, 100.0, -10.0, 120.0, pos),
+                        ? getMappedValue(20.0, 10.0, 100.0, 10.0, pos)
+                        : getMappedValue(20.0, 10.0, 60.0, 20.0, pos),
                     bottom: 100.0,
                     child: Image.asset(
                       '${fruits[index]['image']}',
