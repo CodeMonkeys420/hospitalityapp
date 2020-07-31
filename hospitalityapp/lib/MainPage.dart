@@ -1,14 +1,12 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
 import 'package:nice_button/nice_button.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'AccommodationPage.dart';
 import 'ActivitiesPage.dart';
 import 'RestuarantPage.dart';
 import 'PromotionsPage.dart';
-import 'SpaPage.dart';
+import 'SpaPageFiles/SpaPage.dart';
 
 void main() {
   runApp(MaterialApp(
