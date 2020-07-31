@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'MainPage.dart';
-import 'package:simple_slider/simple_slider.dart';
+//import 'package:simple_slider/simple_slider.dart';
 
 
 
@@ -60,10 +60,10 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Text('Spa Pagesdfgsfdegsdfg'),
-                    ImageSliderWidget(
-                      imageUrls: _imageUrls,
-                      imageBorderRadius: BorderRadius.circular(8.0),
-                    ),
+//                    ImageSliderWidget(
+//                      imageUrls: _imageUrls,
+//                      imageBorderRadius: BorderRadius.circular(8.0),
+//                    ),
                   ]
               ),
             )

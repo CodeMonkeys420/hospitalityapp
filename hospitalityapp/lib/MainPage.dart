@@ -12,9 +12,9 @@ void main() {
   runApp(MaterialApp(
     home: MainPageClass(),
     theme: themeData,
+
   ));
 }
-
 final ThemeData themeData = ThemeData(
   canvasColor: Colors.white,
   accentColor: Colors.grey,
@@ -114,6 +114,7 @@ class MainPageClass extends StatelessWidget {
                   },
                 ),
               ),
+
             ],
           )
       //),
