@@ -6,6 +6,7 @@ import 'AccommodationPage.dart';
 import 'ActivitiesPage.dart';
 import 'RestuarantPage.dart';
 import 'PromotionsPage.dart';
+import 'SliderTest.dart';
 import 'SpaPage.dart';
 
 void main() {
@@ -109,7 +110,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => AccommodationPage()),
+                      MaterialPageRoute(builder: (context) => CarouselDemo()),
                     );
                   },
                 ),
