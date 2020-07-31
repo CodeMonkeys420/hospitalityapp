@@ -1,4 +1,4 @@
-import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
+import 'MainPage.dart';
 import 'package:flutter/material.dart';
 
 import 'GeneratedCardPage.dart';
