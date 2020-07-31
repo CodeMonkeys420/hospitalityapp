@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-import 'MainMenuPage/MainPage.dart';
+import 'MainPage.dart';
 
 
 class RestuarantsPage extends StatelessWidget {

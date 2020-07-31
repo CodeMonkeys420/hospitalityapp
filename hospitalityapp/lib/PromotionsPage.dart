@@ -1,4 +1,4 @@
-import 'package:hospitalityapp/MainMenuPage/MainPage.dart';
+import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
 import 'package:flutter/material.dart';
 
 import 'GeneratedCardPage.dart';
@@ -20,7 +20,15 @@ class _PromotionsPageState extends State<PromotionsPage> {
     return Scaffold(
         appBar: AppBar(
           actions: <Widget>[
-
+            IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainPageClass()),
+                );
+              },
+            ),
           ],
           backgroundColor: Colors.deepPurple,
           elevation: 1.0,
