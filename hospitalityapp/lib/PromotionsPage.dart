@@ -41,7 +41,8 @@ class _PromotionsPageState extends State<PromotionsPage> {
                       },
                       child:
                       Card(
-
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
                         elevation: 3.0,
                         color: Colors.white,
                         margin: EdgeInsets.all(8.0),
@@ -83,7 +84,8 @@ class _PromotionsPageState extends State<PromotionsPage> {
                       },
                       child:
                       Card(
-
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
                         elevation: 3.0,
                         color: Colors.white,
                         margin: EdgeInsets.all(8.0),
@@ -125,7 +127,8 @@ class _PromotionsPageState extends State<PromotionsPage> {
                       },
                       child:
                       Card(
-
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
                         elevation: 3.0,
                         color: Colors.white,
                         margin: EdgeInsets.all(8.0),

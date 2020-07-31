@@ -213,7 +213,7 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
                   Positioned(
                     right: index != currentPage
                         ? getMappedValue(20.0, 10.0, 100.0, 10.0, pos)
-                        : getMappedValue(20.0, 10.0, 60.0, 20.0, pos),
+                        : getMappedValue(20.0, 10.0, 60.0, 20.0, pos), //image posisie
                     bottom: 100.0,
                     child: Image.asset(
                       '${fruits[index]['image']}',
