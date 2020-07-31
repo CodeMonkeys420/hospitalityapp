@@ -6,7 +6,7 @@ import 'AccommodationPage.dart';
 import 'ActivitiesPage.dart';
 import 'RestuarantPage.dart';
 import 'PromotionsPage.dart';
-import 'SpaPageFiles/SpaPage.dart';
+import 'SpaPage.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -77,7 +77,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SpaPage()),
+                      MaterialPageRoute(builder: (context) => SpaAndRelaxPageClass()),
                     );
                   },
                 ),
