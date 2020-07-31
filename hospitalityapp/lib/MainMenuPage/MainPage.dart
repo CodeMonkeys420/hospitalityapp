@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
 import 'package:nice_button/nice_button.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import '../CardSwipe.dart';
+import '../RestuarantPage.dart';
 import '../PromotionsPage.dart';
 import '../SpaPage.dart';
 
@@ -61,7 +61,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CardSwipeClass()),//restuarant
+                      MaterialPageRoute(builder: (context) => RestuarantsPage()),//restuarant
                     );
                   },
                 ),
@@ -92,8 +92,8 @@ class MainPageClass extends StatelessWidget {
                   gradientColors: [secondColor, firstColor],
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        PromotionPage()
+                      context,
+                      MaterialPageRoute(builder: (context) => PromotionsPage()),
                     );
                   },
                 ),
@@ -109,7 +109,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CardSwipeClass()),
+                      MaterialPageRoute(builder: (context) => RestuarantsPage()),
                     );
                   },
                 ),

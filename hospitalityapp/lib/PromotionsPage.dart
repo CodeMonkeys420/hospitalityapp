@@ -1,33 +1,169 @@
+import 'package:hospitalityapp/MainMenuPage/MainPage.dart';
+import 'package:flutter/material.dart';
+
+import 'GeneratedCardPage.dart';
+import 'RestuarantPage.dart';
+
+
+class PromotionsPage extends StatefulWidget {
+
+//  final Function toggleView;
+//  PromotionsPage({this.toggleView});
+
+  @override
+  _PromotionsPageState createState() => _PromotionsPageState();
+}
+
+class _PromotionsPageState extends State<PromotionsPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          actions: <Widget>[
+
+          ],
+          backgroundColor: Colors.deepPurple,
+          elevation: 1.0,
+          title: const Text('Promotions Page'),
+        ),
+          body:SingleChildScrollView( child: Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => GeneratedPage()),
+                        );
+                      },
+                      child:
+                      Card(
+
+                        elevation: 3.0,
+                        color: Colors.white,
+                        margin: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(height: 0.0,),
+                            Image.asset('assets/RedDot_Burger.jpg'),
+                            SizedBox(height: 12.0,),
+                            ListTile(
+                              title: Text("Chilly Burger"),
+
+                              subtitle: Text("Made of the coast of Costa Rica, this burger is one of the hottest burgers in the world according to doctor pepper."),
+//                              trailing: PopupMenuButton(
+//                                // onSelected: _onSelected,
+//                                icon: Icon(Icons.menu),
+//                                itemBuilder: (context) => [
 //
+//                                  PopupMenuItem(
+//                                    //value: posts.DocIdPost,
+//                                    child: Text("View"),
 //
-//import 'package:flutter/material.dart';
+//                                  ),
+//                                ],
+//                              ),
+                            ),
+                            SizedBox(height: 16.0,),
+                          ],
+
+                        ),
+                      ),
+                    ),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => GeneratedPage()),
+                        );
+                      },
+                      child:
+                      Card(
+
+                        elevation: 3.0,
+                        color: Colors.white,
+                        margin: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(height: 0.0,),
+                            Image.asset('assets/RedDot_Burger.jpg'),
+                            SizedBox(height: 12.0,),
+                            ListTile(
+                              title: Text("Chilly Burger"),
+
+                              subtitle: Text("Made of the coast of Costa Rica, this burger is one of the hottest burgers in the world according to doctor pepper."),
+//                              trailing: PopupMenuButton(
+//                                // onSelected: _onSelected,
+//                                icon: Icon(Icons.menu),
+//                                itemBuilder: (context) => [
 //
-//class PromotionPage extends MaterialPageRoute<Null> {
-//  PromotionPage() : super(builder: (BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(
-//        backgroundColor: Theme.of(context).canvasColor,
-//        elevation: 1.0,
-//      ),
-//      body:SingleChildScrollView( child: Center(
-//        child: Column(
-//          children: <Widget>[
-//            Card(
-//              child: Container(
-//                decoration: BoxDecoration(
-//                  image: DecorationImage(
-//                    image: NetworkImage("https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"),
-//                    fit: BoxFit.fitWidth,
-//                    alignment: Alignment.topCenter,
-//                  ),
-//                ),
-//                child: Text("YOUR TEXT"),
-//              ),
-//            ),
-//          ],
-//        ),
-//      ),
-//      ),
-//    );
-//  });
-//}
+//                                  PopupMenuItem(
+//                                    //value: posts.DocIdPost,
+//                                    child: Text("View"),
+//
+//                                  ),
+//                                ],
+//                              ),
+                            ),
+                            SizedBox(height: 16.0,),
+                          ],
+
+                        ),
+                      ),
+                    ),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => GeneratedPage()),
+                        );
+                      },
+                      child:
+                      Card(
+
+                        elevation: 3.0,
+                        color: Colors.white,
+                        margin: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            SizedBox(height: 0.0,),
+                            Image.asset('assets/RedDot_Burger.jpg'),
+                            SizedBox(height: 12.0,),
+                            ListTile(
+                              title: Text("Chilly Burger"),
+
+                              subtitle: Text("Made of the coast of Costa Rica, this burger is one of the hottest burgers in the world according to doctor pepper."),
+//                              trailing: PopupMenuButton(
+//                                // onSelected: _onSelected,
+//                                icon: Icon(Icons.menu),
+//                                itemBuilder: (context) => [
+//
+//                                  PopupMenuItem(
+//                                    //value: posts.DocIdPost,
+//                                    child: Text("View"),
+//
+//                                  ),
+//                                ],
+//                              ),
+                            ),
+                            SizedBox(height: 16.0,),
+                          ],
+
+                        ),
+                      ),
+                    ),
+
+                  ]
+              ),
+            ),
+        ),
+       )
+    );
+  }
+}
