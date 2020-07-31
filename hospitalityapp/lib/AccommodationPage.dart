@@ -4,29 +4,30 @@ import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPag
 
 
 
-class SpaPage extends StatelessWidget {
+class AccommodationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Spa Page',
+      title: 'Accommodation Page',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SpaPageClass(title: 'Spa Page'),
+      home: AccommodationPageClass(title: 'Accommodation Page'),
     );
   }
 }
 
-class SpaPageClass extends StatefulWidget {
-  SpaPageClass({Key key, this.title}) : super(key: key);
+class AccommodationPageClass extends StatefulWidget {
+  AccommodationPageClass({Key key, this.title}) : super(key: key);
   final String title;
 
   @override
-  _SpaPageClassState createState() => _SpaPageClassState();
+  _AccommodationPageClassState createState() => _AccommodationPageClassState();
 }
 
-class _SpaPageClassState extends State<SpaPageClass> {
+class _AccommodationPageClassState extends State<AccommodationPageClass> {
+
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class _SpaPageClassState extends State<SpaPageClass> {
           ],
           backgroundColor: Colors.deepPurple,
           elevation: 1.0,
-          title: const Text('Spa Page'),
+          title: const Text('Accommodation Page'),
         ),
         body: Center(
             child: Padding(

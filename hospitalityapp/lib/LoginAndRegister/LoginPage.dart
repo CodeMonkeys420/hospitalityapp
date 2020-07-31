@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
-import 'package:hospitalityapp/MainMenuPage/MainPage.dart';
+import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
 import 'package:nice_button/nice_button.dart';
 
 import 'RegisterPage.dart';
@@ -43,7 +43,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage('https://lh3.googleusercontent.com/Kqni3QLq83kba-vJUrqN6l06Lu1aAKjlC07L01F3GTPp9ZD5wQcRNaSSI7sjLO5kiA'),
+          image: AssetImage('assets/loginbackground.jpg'),
           fit: BoxFit.cover,
         ),
       ),
