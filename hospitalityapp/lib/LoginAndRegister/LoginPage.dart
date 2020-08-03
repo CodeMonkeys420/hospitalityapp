@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
-import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
+import 'package:hospitalityapp/MainPage.dart';
 import 'package:nice_button/nice_button.dart';
 
 import 'RegisterPage.dart';

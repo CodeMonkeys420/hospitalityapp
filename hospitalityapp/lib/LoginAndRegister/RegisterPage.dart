@@ -1,4 +1,4 @@
-import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
+import 'package:hospitalityapp/MainPage.dart';
 import 'package:flutter/material.dart';
 
 

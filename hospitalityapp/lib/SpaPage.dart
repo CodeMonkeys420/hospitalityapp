@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/Mario/Desktop/hospitalityapp/hospitalityapp/lib/MainPage.dart';
+import 'package:hospitalityapp/MainPage.dart';
 import 'package:simple_slider/simple_slider.dart';
 
 
