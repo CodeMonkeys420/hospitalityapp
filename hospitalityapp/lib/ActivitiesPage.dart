@@ -50,8 +50,16 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
         body:SingleChildScrollView( child: Center(
             child: Column(
                 children: <Widget>[
+new GestureDetector(
+  onTap: (){
+Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
+                    );
 
-                  Card(
+
+  },
+      child:            Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)),
                     child: Column(
@@ -77,8 +85,17 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
                         ),
                       ],
                     ),
-                  ),
-                  Card(
+                  )),
+                new GestureDetector(
+  onTap: (){
+Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
+                    );
+
+
+  },
+      child:       Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)),
                     child: Column(
@@ -104,8 +121,16 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
                         ),
                       ],
                     ),
-                  ),
-                  Card(
+                  )),
+          new GestureDetector(
+  onTap: (){
+Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
+                    );
+
+  },
+      child:          Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)),
                     child: Column(
@@ -131,8 +156,78 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
                         ),
                       ],
                     ),
-                  ),
+                  )),
                 ] )))
     );
   }
+}
+
+
+
+
+
+
+
+class ActivitiesDetails extends StatefulWidget {
+  @override
+  _ActivitiesDetails createState() => _ActivitiesDetails();
+}
+
+class _ActivitiesDetails extends State<ActivitiesDetails> {
+  @override
+  Widget build(BuildContext context) {
+
+   return new  Scaffold(
+appBar: AppBar(
+title: Text('Details'),
+
+),
+body: GridView.count(
+crossAxisCount: 1,
+
+ children: List.generate(1, (index)
+          {
+
+
+        return new Column(
+            children: <Widget>[
+
+              Text(
+                'Activity Name',
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+              ), 
+               
+              SizedBox(
+              child: Text(
+                  'Details about the activity',
+                  textAlign: TextAlign.left,
+                  
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                ),
+              ),
+               SizedBox(
+              child: Text(
+                  'Time slots/calendar',
+                  textAlign: TextAlign.left,
+                  
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                ),
+              ),
+
+              
+
+            ]);
+
+
+
+          })
+
+),
+
+    );
+  }
+
+
 }
