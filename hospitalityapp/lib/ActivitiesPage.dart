@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'MainPage.dart';
-
+import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+import 'dart:math';
+import 'package:intl/intl.dart' show DateFormat;
+import 'package:spinner_input/spinner_input.dart';
 
 
 class ActivitiesPage extends StatelessWidget {
@@ -51,8 +54,8 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
             child: Column(
                 children: <Widget>[
 new GestureDetector(
-  onTap: (){
-Navigator.push(
+                     onTap: (){
+                      Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => ActivitiesDetails()),
                     );
@@ -78,7 +81,13 @@ Navigator.push(
                           children: <Widget>[
                             FlatButton(
                               child: const Text('Book'),
-                              onPressed: () {/* ... */},
+                              onPressed: () {
+
+                                      Navigator.push(
+                                          context,
+                                           MaterialPageRoute(builder: (context) => bookSpot()),
+                    );
+                              },
                             ),
 
                           ],
@@ -87,8 +96,8 @@ Navigator.push(
                     ),
                   )),
                 new GestureDetector(
-  onTap: (){
-Navigator.push(
+                 onTap: (){
+                    Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => ActivitiesDetails()),
                     );
@@ -114,7 +123,13 @@ Navigator.push(
                           children: <Widget>[
                             FlatButton(
                               child: const Text('Book'),
-                              onPressed: () {/* ... */},
+                              onPressed: () {
+
+                                Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => bookSpot()),
+                    );
+                              },
                             ),
 
                           ],
@@ -149,7 +164,13 @@ Navigator.push(
                           children: <Widget>[
                             FlatButton(
                               child: const Text('Book'),
-                              onPressed: () {/* ... */},
+                              onPressed: () {
+          Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => bookSpot()),
+                    );
+
+                              },
                             ),
 
                           ],
@@ -229,5 +250,175 @@ crossAxisCount: 1,
     );
   }
 
+
+}
+
+
+String sanitizeDateTime(DateTime dateTime) => "${dateTime.year}-${dateTime.month}-${dateTime.day}";
+var time;
+Set<String> getDateSet(List<DateTime> dates) => dates.map(sanitizeDateTime).toSet();
+String dropdownValue = '10:00';
+ final formatH = DateFormat("yyyy-MM-dd");
+
+
+class bookSpot extends StatefulWidget {
+  @override
+  bookSpotState createState() => bookSpotState();
+}
+
+
+class bookSpotState extends State<bookSpot> {
+
+
+  @override
+  Widget build(BuildContext context) {
+
+
+      return 
+       new Scaffold(
+        
+            appBar: AppBar(
+              title: Text("Book"),
+
+
+            ),
+            body: GridView.count(
+
+              crossAxisCount: 1,
+
+              children: List.generate(1, (index)
+              {
+               
+                                return Center(
+                                    child:
+                                    new Column(
+                                        children: <Widget>[
+                
+                                          TextFormField(
+                                            decoration: InputDecoration(labelText: 'Enter Full Name'
+                                            ),
+                                          
+                                            /* initialValue: name,*/
+                                          )
+                                        ,
+                                        TextFormField(
+                                            decoration: InputDecoration(labelText: 'Enter cell number'
+                                            ),
+                                          
+                                            /* initialValue: name,*/
+                                          ),
+                
+                                              Container(
+                                            margin: EdgeInsets.all(20),
+                                            child: new Column(
+                                                children: <Widget>[
+                
+                                             new Text('Ammount of people'),
+                
+                                           new  SpinnerInput(
+                
+                
+                                              spinnerValue: 0,
+                                              minValue: 1,
+                                              maxValue: 20,
+                
+                
+                
+                                              onChange: (newValue) {
+                                                
+                                                },
+                                         ),
+                              ])
+                
+                                          ),
+                
+                 Column(children: <Widget>[
+                
+                                            DateTimeField(
+                
+                                              format: formatH,
+                                              decoration: InputDecoration(labelText: 'Choose a date '),
+                                              onShowPicker: (context, currentValue) async {
+                
+                                                final date = await showDatePicker(
+                                                    context: context,
+                                                    firstDate: DateTime.now(),
+                                                  initialDate: currentValue ?? DateTime.now(),
+                                                
+                                                    lastDate: DateTime(2400));
+                
+                
+                                                if (date != null) {
+                                                  
+                                               
+                                                 
+                                                  return date;
+                                                } else {
+                
+                                                  return currentValue;
+                                                }
+                
+                
+                                                
+                
+                                              },
+                                            ),
+                
+                                            Row( children: <Widget>[
+                
+                                              Text('Choose Time slot:  '),
+                                            DropdownButton<String>(
+                
+                                            icon: Icon(Icons.arrow_downward),
+                                            value: dropdownValue,
+                            iconSize: 24,
+                            elevation: 20,
+                            style:
+
+                            TextStyle(
+                                color: Colors.deepPurple
+                            ),
+                            underline: Container(
+                              height: 2,
+                              color: Colors.deepPurpleAccent,
+                            ),
+                            onChanged: (String newValue) {
+                              setState(() {
+                                dropdownValue = newValue;
+                                time = dropdownValue.toString();
+
+
+
+                              });
+                            },
+                            items: <String>['08:00', '08:15', '08:30', '08:45', '09:00', '09:15', '09:30',
+                              '09:45', '10:00', '10:15', '10:30', '10:45','11:00','11:15','11:30','11:45','12:00',
+                              '12:15','12:30','12:45','13:00','13:15','13:30','13:45','14:00','14:15','14:30','14:45','15:00'
+                              ,'15:15','15:30','15:45','16:00']
+                                .map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            })
+                                .toList(),
+                          )
+                                                 ,
+
+                                        ])
+
+                          ]),
+
+
+
+
+
+
+                        ]));
+
+
+
+              }),
+            ));}
 
 }
