@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hospitalityapp/MainPage.dart';
+import 'MainPage.dart';
 
 
 

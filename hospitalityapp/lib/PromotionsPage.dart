@@ -1,4 +1,4 @@
-import 'package:hospitalityapp/MainPage.dart';
+import 'MainPage.dart';
 import 'package:flutter/material.dart';
 
 import 'GeneratedCardPage.dart';
