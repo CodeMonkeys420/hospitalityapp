@@ -289,43 +289,44 @@ class bookSpotState extends State<bookSpot> {
               children: List.generate(1, (index)
               {
                
-                                return Center(
-                                    child:
-                                    new Column(
-                                        children: <Widget>[
-                
-                                          TextFormField(
-                                            decoration: InputDecoration(labelText: 'Enter Full Name'
-                                            ),
-                                          
-                                            /* initialValue: name,*/
-                                          )
-                                        ,
-                                        TextFormField(
-                                            decoration: InputDecoration(labelText: 'Enter cell number'
-                                            ),
-                                          
-                                            /* initialValue: name,*/
-                                          ),
-                
-                                              Container(
-                                            margin: EdgeInsets.all(20),
-                                            child: new Column(
-                                                children: <Widget>[
-                
-                                             new Text('Ammount of people'),
-                
-                                           new  SpinnerInput(
-                
-                
-                                              spinnerValue: 0,
+                                var value;
+                                                                return Center(
+                                                                    child:
+                                                                    new Column(
+                                                                        children: <Widget>[
+                                                
+                                                                          TextFormField(
+                                                                            decoration: InputDecoration(labelText: 'Enter Full Name'
+                                                                            ),
+                                                                          
+                                                                            /* initialValue: name,*/
+                                                                          )
+                                                                        ,
+                                                                        TextFormField(
+                                                                            decoration: InputDecoration(labelText: 'Enter cell number'
+                                                                            ),
+                                                                          
+                                                                            /* initialValue: name,*/
+                                                                          ),
+                                                
+                                                                              Container(
+                                                                            margin: EdgeInsets.all(20),
+                                                                            child: new Column(
+                                                                                children: <Widget>[
+                                                
+                                                                             new Text('Ammount of people'),
+                                                
+                                                                           new  SpinnerInput(
+                                                
+                                                
+                                                                              spinnerValue: value,
                                               minValue: 1,
                                               maxValue: 20,
                 
                 
                 
                                               onChange: (newValue) {
-                                                
+                                                value = newValue;
                                                 },
                                          ),
                               ])
