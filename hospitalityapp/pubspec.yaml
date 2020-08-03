@@ -15,7 +15,7 @@ dependencies:
   spinner_input: ^0.1.2
   datetime_picker_formfield: ^0.4.3
   flutter_native_timezone: ^1.0.2
-#  simple_slider: ^0.0.2
+  carousel_slider: ^2.2.1
 
 
 dev_dependencies:
