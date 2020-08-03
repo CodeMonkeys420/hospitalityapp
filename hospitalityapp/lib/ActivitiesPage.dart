@@ -53,7 +53,7 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
         body:SingleChildScrollView( child: Center(
             child: Column(
                 children: <Widget>[
-new GestureDetector(
+                new GestureDetector(
                      onTap: (){
                       Navigator.push(
                       context,
@@ -61,18 +61,18 @@ new GestureDetector(
                     );
 
 
-  },
-      child:            Card(
+                  },
+                     child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15.0)),
-                    child: Column(
+                         child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
+                             new ListTile(
+                               leading:SizedBox( //having an image first before text on cards
                             height: 200.0,
                             width: 150.0, // fixed width and height
-                            child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
+                                 child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
                           ),
                           title: Text('Resturuant Name'),
                           subtitle: Text('Description of the place'),
@@ -199,33 +199,43 @@ class _ActivitiesDetails extends State<ActivitiesDetails> {
   Widget build(BuildContext context) {
 
    return new  Scaffold(
-appBar: AppBar(
-title: Text('Details'),
+     appBar: AppBar(
+       actions: <Widget>[
 
-),
-body: GridView.count(
-crossAxisCount: 1,
+       ],
+       backgroundColor: Colors.deepPurple,
+       elevation: 1.0,
+       title: const Text('Activity Details'),
+     ),
+      body: GridView.count(
+      crossAxisCount: 1,
 
- children: List.generate(1, (index)
-          {
+       children: List.generate(1, (index)
+                {
 
 
         return new Column(
             children: <Widget>[
 
-              Text(
-                'Activity Name',
-                textAlign: TextAlign.center,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'Activity Name',
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                ),
               ), 
                
-              SizedBox(
-              child: Text(
-                  'Details about the activity',
-                  textAlign: TextAlign.left,
-                  
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                child: Text(
+                    'Details about the activity',
+                    textAlign: TextAlign.left,
+
+                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                  ),
                 ),
               ),
                SizedBox(
