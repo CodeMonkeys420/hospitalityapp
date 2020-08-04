@@ -13,10 +13,10 @@ dependencies:
   nice_button: ^0.1.7
   spinner: ^1.0.1
   spinner_input: ^0.1.2
-  
   flutter_native_timezone: ^1.0.2
   card_settings: ^1.12.1
-#  simple_slider: ^0.0.2
+  carousel_slider: ^2.2.1
+
 
 
 dev_dependencies:

@@ -2,34 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:nice_button/NiceButton.dart';
 
-import 'BookingPage.dart';
 import 'LoginAndRegister/LoginPage.dart';
 import 'MainPage.dart';
 
 
-class GeneratedPage extends StatelessWidget {
+class BookingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Generated Page',
+      title: 'Booking Page',
       theme: new ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: new RestuarantPageClass(title: 'Generated Page'),
+      home: new BookingPageClass(title: 'Booking Page'),
     );
   }
 }
 
-class RestuarantPageClass extends StatefulWidget {
-  RestuarantPageClass({Key key, this.title}) : super(key: key);
+class BookingPageClass extends StatefulWidget {
+  BookingPageClass({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _RestuarantPageClassState createState() => new _RestuarantPageClassState();
+  _BookingPageClassState createState() => new _BookingPageClassState();
 }
 
-class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerProviderStateMixin {
+class _BookingPageClassState extends State<BookingPageClass> with TickerProviderStateMixin {
   PageController pageViewController;
   String str;
   GlobalKey<ScaffoldState> scfldKey = new GlobalKey<ScaffoldState>();
@@ -108,7 +107,7 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
         ],
         backgroundColor: Colors.deepPurple,
         elevation: 1.0,
-        title: const Text('Details Page'),
+        title: const Text('Booking Page'),
       ),
       key: scfldKey,
       body: AnimatedContainer(
@@ -199,34 +198,17 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => BookingPage()),
+                                        MaterialPageRoute(builder: (context) => MainPageClass()),//add booking page to this btn
                                       );
                                     },
                                   ),
                                 ),
 
+
                               ],
                             ),
                           ),
                         ),
-//                        Positioned(
-//                          left: index != currentPage
-//                              ? getMappedValue(20.0, 100.0, 160.0, 20.0, pos)
-//                              : getMappedValue(20.0, 100.0, 20.0, -120.0, pos),
-//                          bottom: 20.0,
-//                          child: Opacity(
-//                            opacity: index != currentPage
-//                                ? getMappedValue(20.0, 100.0, 0.0, 0.4, pos)
-//                                : getMappedValue(20.0, 100.0, 0.4, 00.0, pos),
-//                            child: Text(
-//                              '${fruits[index]['name']}',
-//                              maxLines: 1,
-//                              softWrap: true,
-//                              style: TextStyle(
-//                                  fontSize: 130.0, fontWeight: FontWeight.w900),
-//                            ),
-//                          ),
-//                        ),
                       ],
                     ),
                   ),
