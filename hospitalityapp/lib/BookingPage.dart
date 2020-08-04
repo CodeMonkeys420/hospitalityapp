@@ -198,34 +198,17 @@ class _BookingPageClassState extends State<BookingPageClass> with TickerProvider
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => MainPageClass()),
+                                        MaterialPageRoute(builder: (context) => MainPageClass()),//add booking page to this btn
                                       );
                                     },
                                   ),
                                 ),
 
+
                               ],
                             ),
                           ),
                         ),
-//                        Positioned(
-//                          left: index != currentPage
-//                              ? getMappedValue(20.0, 100.0, 160.0, 20.0, pos)
-//                              : getMappedValue(20.0, 100.0, 20.0, -120.0, pos),
-//                          bottom: 20.0,
-//                          child: Opacity(
-//                            opacity: index != currentPage
-//                                ? getMappedValue(20.0, 100.0, 0.0, 0.4, pos)
-//                                : getMappedValue(20.0, 100.0, 0.4, 00.0, pos),
-//                            child: Text(
-//                              '${fruits[index]['name']}',
-//                              maxLines: 1,
-//                              softWrap: true,
-//                              style: TextStyle(
-//                                  fontSize: 130.0, fontWeight: FontWeight.w900),
-//                            ),
-//                          ),
-//                        ),
                       ],
                     ),
                   ),
