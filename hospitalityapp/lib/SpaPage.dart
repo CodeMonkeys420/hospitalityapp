@@ -1,6 +1,8 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'MainPage.dart';
-//import 'package:simple_slider/simple_slider.dart';
+import 'SliderTest.dart';
+
 
 
 
@@ -39,15 +41,7 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
     return Scaffold(
         appBar: AppBar(
           actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.arrow_back),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MainPageClass()),
-                );
-              },
-            ),
+
           ],
           backgroundColor: Colors.deepPurple,
           elevation: 1.0,
@@ -59,11 +53,16 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
+                    CarouselSlider(
+                      options: CarouselOptions(
+                        autoPlay: true,
+                        aspectRatio: 2.0,
+                        enlargeCenterPage: true,
+                      ),
+                      items: imageSliders,
+                    ),
                     Text('Spa Pagesdfgsfdegsdfg'),
-//                    ImageSliderWidget(
-//                      imageUrls: _imageUrls,
-//                      imageBorderRadius: BorderRadius.circular(8.0),
-//                    ),
+
                   ]
               ),
             )
