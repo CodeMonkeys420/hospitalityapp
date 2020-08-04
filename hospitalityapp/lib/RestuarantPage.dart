@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
+import 'GeneratedCardPage.dart';
 import 'MainPage.dart';
 
 
@@ -148,44 +149,52 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
                               ? getMappedValue(20.0, 100.0, 160.0, 20.0, pos)
                               : getMappedValue(20.0, 100.0, 20.0, -120.0, pos),
                           top: 20.0,
-                          child: Opacity(
-                            opacity: index != currentPage
-                                ? getMappedValue(20.0, 100.0, 0.0, 01.0, pos)
-                                : getMappedValue(20.0, 100.0, 01.0, 00.0, pos),
-                            child: Column(
-                              children: <Widget>[
-                                Row(
-                                  mainAxisAlignment:
-                                  MainAxisAlignment.spaceBetween,
-                                  children: <Widget>[
-                                    Text(
-                                      '${fruits[index]['name']}',
-                                      maxLines: 1,
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 30.0,
-                                          fontWeight: FontWeight.w300),
-                                    ),
-                                    Text(
-                                      '${fruits[index]['price']}',
-                                      softWrap: true,
-                                      style: TextStyle(
-                                          fontSize: 30.0,
-                                          fontWeight: FontWeight.w300),
-                                    ),
-                                  ],
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15.0),
-                                  child: Text(
-                                    '${fruits[index]['disc']}',
-                                    softWrap: true,
-                                    style: TextStyle(
-                                        fontSize: 16.0,
-                                        fontWeight: FontWeight.w300),
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => GeneratedPage()),
+                              );
+                            },
+                            child: Opacity(
+                              opacity: index != currentPage
+                                  ? getMappedValue(20.0, 100.0, 0.0, 01.0, pos)
+                                  : getMappedValue(20.0, 100.0, 01.0, 00.0, pos),
+                              child: Column(
+                                children: <Widget>[
+                                  Row(
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      Text(
+                                        '${fruits[index]['name']}',
+                                        maxLines: 1,
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 30.0,
+                                            fontWeight: FontWeight.w300),
+                                      ),
+                                      Text(
+                                        '${fruits[index]['price']}',
+                                        softWrap: true,
+                                        style: TextStyle(
+                                            fontSize: 30.0,
+                                            fontWeight: FontWeight.w300),
+                                      ),
+                                    ],
                                   ),
-                                ),
-                              ],
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 15.0),
+                                    child: Text(
+                                      '${fruits[index]['disc']}',
+                                      softWrap: true,
+                                      style: TextStyle(
+                                          fontSize: 16.0,
+                                          fontWeight: FontWeight.w300),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
