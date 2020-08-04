@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'MainPage.dart';
-import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+//import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'dart:math';
 import 'package:intl/intl.dart' show DateFormat;
 import 'package:spinner_input/spinner_input.dart';
+import 'package:card_settings/card_settings.dart';
 
 
 class ActivitiesPage extends StatelessWidget {
@@ -277,7 +278,7 @@ class bookSpot extends StatefulWidget {
 }
 
 
-class bookSpotState extends State<bookSpot> {
+/* class bookSpotState extends State<bookSpot> {
 
 
   @override
@@ -432,4 +433,120 @@ class bookSpotState extends State<bookSpot> {
               }),
             ));}
 
-}
+} */
+
+class bookSpotState extends State<bookSpot> {
+
+int ammountPeople = 1;
+   String title = "";
+    int phoneNum = 0;  
+  String url = "http://www.codyleet.com/spheria";
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    
+   return 
+   
+    new Scaffold(
+        
+            appBar: AppBar(
+              title: Text("Booking Form"),
+
+
+            ),
+            body:Form(
+        key: _formKey,
+        child: CardSettings(
+          children: <CardSettingsSection>[
+            CardSettingsSection(
+              header: CardSettingsHeader(
+                label: 'Personal Information',
+              ),
+              children: <CardSettingsWidget>[
+                CardSettingsText(
+                  label: 'Full name',
+                  initialValue: title,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) return 'Name is required.';
+                  },
+                  onSaved: (value) => title = value,
+                ),
+                CardSettingsNumberPicker(
+     
+      label: 'Ammount of people',
+      
+      initialValue: ammountPeople,
+      min: 1,
+      max: 10,
+      stepInterval: 1,
+      validator: (value) {
+        if (value == null) return 'Ammount of people is required.';
+     
+        return null;
+      },
+      onSaved: (value) => {},
+      onChanged: (value) {
+        setState(() {
+         ammountPeople = value;
+        });
+       
+      },
+    ),
+
+
+     CardSettingsPhone(
+      label: 'Phone number',
+      initialValue: phoneNum,
+      autovalidate: false,
+      validator: (value) {
+        return null;
+      },
+      onSaved: (value) => {},
+      onChanged: (value) {
+        setState(() {
+          phoneNum= value;
+        });
+        
+      },
+    ),
+
+
+     CardSettingsTimePicker(
+     
+      icon: Icon(Icons.access_time),
+      label: 'Time',
+      initialValue: TimeOfDay(
+          hour: 12 ,
+          minute:00 ),
+      onSaved: (value) => {},
+      onChanged: (value) {
+        setState(() {
+         
+        });
+       
+      },
+    ),
+
+
+    CardSettingsDatePicker(
+      
+      icon: Icon(Icons.calendar_today),
+      label: 'Date',
+      dateFormat: DateFormat.yMMMMd(),
+      initialValue: DateTime.now(),
+      onSaved: (value) => {},
+      onChanged: (value) {
+        setState(() {
+          
+        });
+       
+      },
+    )
+              ],
+            ),
+          ])
+        ));
+//gddgfggdsg
+}}
