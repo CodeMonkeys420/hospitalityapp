@@ -78,6 +78,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
+                     // MaterialPageRoute(builder: (context) => CarouselDemoHome()),
                       MaterialPageRoute(builder: (context) => SpaAndRelaxPageClass()),
                     );
                   },
