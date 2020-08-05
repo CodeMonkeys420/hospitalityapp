@@ -83,11 +83,10 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
                             FlatButton(
                               child: const Text('Book'),
                               onPressed: () {
-
-                                      Navigator.push(
-                                          context,
-                                           MaterialPageRoute(builder: (context) => bookSpot()),
-                    );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => bookSpot()),
+                                );
                               },
                             ),
 
