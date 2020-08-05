@@ -45,7 +45,27 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
         backgroundColor: Colors.grey,
         appBar: AppBar(
           actions: <Widget>[
+            Container(
+              width: 40,
+              height: 40,
+              child: FloatingActionButton(
+                elevation: 40,
+                backgroundColor: Colors.white,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => BookingPage()),
+                  );
+                },
+                child: new IconTheme(
+                  data: new IconThemeData(
+                      color: Colors.black),
+                  child: new Icon(Icons.book),
+                ),
 
+                //tooltip: 'Pick Image',
+              ),
+            ),
           ],
           backgroundColor: Colors.deepPurple,
           elevation: 1.0,
@@ -75,19 +95,6 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
 
                         ),
                       ),
-                    ),
-                    NiceButton(
-                      radius: 40,
-                      padding: const EdgeInsets.all(15),
-                      text: "Book",
-//                icon: Icons.account_box,
-                      gradientColors: [secondColor, firstColor],
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => BookingPage()),
-                        );
-                      },
                     ),
                     CarouselSlider(
                       options: CarouselOptions(
