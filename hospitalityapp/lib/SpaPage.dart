@@ -1,5 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:nice_button/NiceButton.dart';
+import 'BookingPage.dart';
+import 'LoginAndRegister/LoginPage.dart';
 import 'MainPage.dart';
 import 'SliderTest.dart';
 
@@ -39,6 +42,7 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.grey,
         appBar: AppBar(
           actions: <Widget>[
 
@@ -47,7 +51,7 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
           elevation: 1.0,
           title: const Text('Spa Page'),
         ),
-        body: Center(
+        body: SingleChildScrollView( child:Center(
             child: Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Column(
@@ -61,11 +65,70 @@ class _SpaAndRelaxPageClassState extends State<SpaAndRelaxPageClass> {
                       ),
                       items: imageSliders,
                     ),
-                    Text('Spa Pagesdfgsfdegsdfg'),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Text('From aromatherapy massages and mineral scrubs to facials and detox treatments, there’s a spa treatment with your name on it.'
+                          ),
+
+                        ),
+                      ),
+                    ),
+                    NiceButton(
+                      radius: 40,
+                      padding: const EdgeInsets.all(15),
+                      text: "Book",
+//                icon: Icons.account_box,
+                      gradientColors: [secondColor, firstColor],
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => BookingPage()),
+                        );
+                      },
+                    ),
+                    CarouselSlider(
+                      options: CarouselOptions(
+                        autoPlay: true,
+                        aspectRatio: 2.0,
+                        enlargeCenterPage: true,
+                      ),
+                      items: imageSliders,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Text('From aromatherapy massages and mineral scrubs to facials and detox treatments, there’s a spa treatment with your name on it.'
+                          ),
+                        ),
+                      ),
+                    ),CarouselSlider(
+                      options: CarouselOptions(
+                        autoPlay: true,
+                        aspectRatio: 2.0,
+                        enlargeCenterPage: true,
+                      ),
+                      items: imageSliders,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 100,
+                        child: Card(
+                          child: Text('From aromatherapy massages and mineral scrubs to facials and detox treatments, there’s a spa treatment with your name on it.'
+                          ),
+                        ),
+                      ),
+                    ),
 
                   ]
               ),
-            )
+            ),
+          )
         )
     );
   }
