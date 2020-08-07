@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hospitalityapp/LoginAndRegister/LoginPage.dart';
 import 'package:nice_button/nice_button.dart';
+import 'AccommodationDetails.dart';
 import 'AccommodationPage.dart';
 import 'ActivitiesPage.dart';
 import 'RestuarantPage.dart';
@@ -110,7 +111,7 @@ class MainPageClass extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CarouselDemo()),
+                      MaterialPageRoute(builder: (context) => AccommodationPage()),
                     );
                   },
                 ),
