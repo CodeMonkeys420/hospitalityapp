@@ -54,130 +54,131 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
         body:SingleChildScrollView( child: Center(
             child: Column(
                 children: <Widget>[
-                new GestureDetector(
-                     onTap: (){
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
-                    );
+                  new GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => bookSpot()),
+                        );
 
 
-                  },
-                     child: Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                         child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                             new ListTile(
-                               leading:SizedBox( //having an image first before text on cards
-                            height: 200.0,
-                            width: 150.0, // fixed width and height
-                                 child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => bookSpot()),
-                                );
-                              },
+                            new ListTile(
+                              leading:SizedBox( //having an image first before text on cards
+                                height: 200.0,
+                                width: 150.0, // fixed width and height
+                                child: Image.network('https://spartanshield.org/wp-content/uploads/2018/02/Black-Panther-900x900-1518475303.jpg'),
+                              ),
+                              title: Text('Resturuant Name'),
+                              subtitle: Text('Description of the place'),
                             ),
+                            ButtonBar(
+                              children: <Widget>[
+                                FlatButton(
+                                  child: const Text('Book'),
+                                  onPressed: () {
 
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => bookSpot()),
+                                    );
+                                  },
+                                ),
+
+                              ],
+                            ),
                           ],
                         ),
-                      ],
-                    ),
-                  )),
-                new GestureDetector(
-                 onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
-                    );
+                      )),
+                  new GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => bookSpot()),
+                        );
 
 
-  },
-      child:       Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
-                            height: 200.0,
-                            width: 150.0, // fixed width and height
-                            child: Image.network('https://vignette.wikia.nocookie.net/mua/images/f/fa/MUA3_Black_Panther.png/revision/latest?cb=20190622013215'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
+                      },
+                      child:       Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {
-
-                                Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => bookSpot()),
-                    );
-                              },
+                            new ListTile(
+                              leading:SizedBox( //having an image first before text on cards
+                                height: 200.0,
+                                width: 150.0, // fixed width and height
+                                child: Image.network('https://vignette.wikia.nocookie.net/mua/images/f/fa/MUA3_Black_Panther.png/revision/latest?cb=20190622013215'),
+                              ),
+                              title: Text('Resturuant Name'),
+                              subtitle: Text('Description of the place'),
                             ),
+                            ButtonBar(
+                              children: <Widget>[
+                                FlatButton(
+                                  child: const Text('Book'),
+                                  onPressed: () {
 
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => bookSpot()),
+                                    );
+                                  },
+                                ),
+
+                              ],
+                            ),
                           ],
                         ),
-                      ],
-                    ),
-                  )),
-          new GestureDetector(
-  onTap: (){
-Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ActivitiesDetails()),
-                    );
+                      )),
+                  new GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => bookSpot()),
+                        );
 
-  },
-      child:          Card(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        new ListTile(
-                          leading:SizedBox( //having an image first before text on cards
+                      },
+                      child:          Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            new ListTile(
+                              leading:SizedBox( //having an image first before text on cards
 //                        height: 200.0,
 //                        width: 150.0, // fixed width and height
-                            child: Image.network('https://i.pinimg.com/originals/2b/32/11/2b32119a2f1c7623e4ca3e976cbd3efc.jpg'),
-                          ),
-                          title: Text('Resturuant Name'),
-                          subtitle: Text('Description of the place'),
-                        ),
-                        ButtonBar(
-                          children: <Widget>[
-                            FlatButton(
-                              child: const Text('Book'),
-                              onPressed: () {
-          Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => bookSpot()),
-                    );
-
-                              },
+                                child: Image.network('https://i.pinimg.com/originals/2b/32/11/2b32119a2f1c7623e4ca3e976cbd3efc.jpg'),
+                              ),
+                              title: Text('Resturuant Name'),
+                              subtitle: Text('Description of the place'),
                             ),
+                            ButtonBar(
+                              children: <Widget>[
+                                FlatButton(
+                                  child: const Text('Book'),
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => bookSpot()),
+                                    );
 
+                                  },
+                                ),
+
+                              ],
+                            ),
                           ],
                         ),
-                      ],
-                    ),
-                  )),
+                      )),
                 ] )))
     );
   }
@@ -198,64 +199,64 @@ class _ActivitiesDetails extends State<ActivitiesDetails> {
   @override
   Widget build(BuildContext context) {
 
-   return new  Scaffold(
-     appBar: AppBar(
-       actions: <Widget>[
+    return new  Scaffold(
+      appBar: AppBar(
+        actions: <Widget>[
 
-       ],
-       backgroundColor: Colors.deepPurple,
-       elevation: 1.0,
-       title: const Text('Activity Details'),
-     ),
+        ],
+        backgroundColor: Colors.deepPurple,
+        elevation: 1.0,
+        title: const Text('Activity Details'),
+      ),
       body: GridView.count(
-      crossAxisCount: 1,
+          crossAxisCount: 1,
 
-       children: List.generate(1, (index)
-                {
+          children: List.generate(1, (index)
+          {
 
 
-        return new Column(
-            children: <Widget>[
+            return new Column(
+                children: <Widget>[
 
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Activity Name',
-                  textAlign: TextAlign.center,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
-                ),
-              ), 
-               
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: SizedBox(
-                child: Text(
-                    'Details about the activity',
-                    textAlign: TextAlign.left,
-
-                    style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      'Activity Name',
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                    ),
                   ),
-                ),
-              ),
-               SizedBox(
-              child: Text(
-                  'Time slots/calendar',
-                  textAlign: TextAlign.left,
-                  
-                  style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
-                ),
-              ),
 
-              
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      child: Text(
+                        'Details about the activity',
+                        textAlign: TextAlign.left,
 
-            ]);
+                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    child: Text(
+                      'Time slots/calendar',
+                      textAlign: TextAlign.left,
+
+                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 12),
+                    ),
+                  ),
+
+
+
+                ]);
 
 
 
           })
 
-),
+      ),
 
     );
   }
@@ -268,7 +269,7 @@ String sanitizeDateTime(DateTime dateTime) => "${dateTime.year}-${dateTime.month
 var time;
 Set<String> getDateSet(List<DateTime> dates) => dates.map(sanitizeDateTime).toSet();
 String dropdownValue = '10:00';
- final formatH = DateFormat("yyyy-MM-dd");
+final formatH = DateFormat("yyyy-MM-dd");
 
 
 class bookSpot extends StatefulWidget {
@@ -436,116 +437,124 @@ class bookSpot extends StatefulWidget {
 
 class bookSpotState extends State<bookSpot> {
 
-int ammountPeople = 1;
-   String title = "";
-    int phoneNum = 0;  
+  int ammountPeople = 1;
+  String title = "";
+  int phoneNum = 0;
   String url = "http://www.codyleet.com/spheria";
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    
-   return 
-   
-    new Scaffold(
-        
-            appBar: AppBar(
-              title: Text("Booking Form"),
+
+    return
+
+      new Scaffold(
+
+          appBar: AppBar(
+            actions: <Widget>[
+
+            ],
+            backgroundColor: Colors.deepPurple,
+            elevation: 1.0,
+            title: const Text('Booking Page'),
+          ),
+          body:Form(
+              key: _formKey,
+              child: CardSettings(
+                  children: <CardSettingsSection>[
+                    CardSettingsSection(
+                      header: CardSettingsHeader(
+                        color: Colors.blue,
+                        label: 'Personal Information',
+                      ),
+                      children: <CardSettingsWidget>[
+                        CardSettingsText(
+                          label: 'Full name',
+                          initialValue: title,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) return 'Name is required.';
+                          },
+                          onSaved: (value) => title = value,
+                        ),
+                        CardSettingsNumberPicker(
+
+                          label: 'Amount of people',
+
+                          initialValue: ammountPeople,
+                          min: 1,
+                          max: 10,
+                          stepInterval: 1,
+                          validator: (value) {
+                            if (value == null) return 'Amount of people is required.';
+
+                            return null;
+                          },
+                          onSaved: (value) => {},
+                          onChanged: (value) {
+                            setState(() {
+                              ammountPeople = value;
+                            });
+
+                          },
+                        ),
 
 
-            ),
-            body:Form(
-        key: _formKey,
-        child: CardSettings(
-          children: <CardSettingsSection>[
-            CardSettingsSection(
-              header: CardSettingsHeader(
-                label: 'Personal Information',
+                        CardSettingsPhone(
+                          label: 'Phone number',
+                          initialValue: phoneNum,
+                          autovalidate: false,
+                          validator: (value) {
+                            return null;
+                          },
+                          onSaved: (value) => {},
+                          onChanged: (value) {
+                            setState(() {
+                              phoneNum= value;
+                            });
+
+                          },
+                        ),
+
+
+                        CardSettingsTimePicker(
+
+                          icon: Icon(Icons.access_time),
+                          label: 'Time',
+                          initialValue: TimeOfDay(
+                              hour: 12 ,
+                              minute:00 ),
+                          onSaved: (value) => {},
+                          onChanged: (value) {
+                            setState(() {
+
+                            });
+
+                          },
+                        ),
+
+
+                        CardSettingsDatePicker(
+
+                          icon: Icon(Icons.calendar_today),
+                          label: 'Date',
+                          dateFormat: DateFormat.yMMMMd(),
+                          initialValue: DateTime.now(),
+                          onSaved: (value) => {},
+                          onChanged: (value) {
+                            setState(() {
+
+                            });
+
+                          },
+                        ),
+                      ],
+                    ),
+
+                  ],
               ),
-              children: <CardSettingsWidget>[
-                CardSettingsText(
-                  label: 'Full name',
-                  initialValue: title,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) return 'Name is required.';
-                  },
-                  onSaved: (value) => title = value,
-                ),
-                CardSettingsNumberPicker(
-     
-      label: 'Ammount of people',
-      
-      initialValue: ammountPeople,
-      min: 1,
-      max: 10,
-      stepInterval: 1,
-      validator: (value) {
-        if (value == null) return 'Ammount of people is required.';
-     
-        return null;
-      },
-      onSaved: (value) => {},
-      onChanged: (value) {
-        setState(() {
-         ammountPeople = value;
-        });
-       
-      },
-    ),
 
+          ),
 
-     CardSettingsPhone(
-      label: 'Phone number',
-      initialValue: phoneNum,
-      autovalidate: false,
-      validator: (value) {
-        return null;
-      },
-      onSaved: (value) => {},
-      onChanged: (value) {
-        setState(() {
-          phoneNum= value;
-        });
-        
-      },
-    ),
-
-
-     CardSettingsTimePicker(
-     
-      icon: Icon(Icons.access_time),
-      label: 'Time',
-      initialValue: TimeOfDay(
-          hour: 12 ,
-          minute:00 ),
-      onSaved: (value) => {},
-      onChanged: (value) {
-        setState(() {
-         
-        });
-       
-      },
-    ),
-
-
-    CardSettingsDatePicker(
-      
-      icon: Icon(Icons.calendar_today),
-      label: 'Date',
-      dateFormat: DateFormat.yMMMMd(),
-      initialValue: DateTime.now(),
-      onSaved: (value) => {},
-      onChanged: (value) {
-        setState(() {
-          
-        });
-       
-      },
-    )
-              ],
-            ),
-          ])
-        ));
-//gddgfggdsg
-}}
+      );
+  }}
