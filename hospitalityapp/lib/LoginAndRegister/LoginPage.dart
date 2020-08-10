@@ -4,8 +4,8 @@ import '../main.dart';
 import 'package:nice_button/nice_button.dart';
 
 import 'RegisterPage.dart';
-var firstColor = Color(0xffF263FD), secondColor = Color(0xff1B2CF8);
-class SignIn extends StatefulWidget {
+var firstColor = Color(0xff43cea2), secondColor = Color(0xff185a9d); //#ffafbd → #ffc3a0
+class SignIn extends StatefulWidget { //#2193b0 → #6dd5ed
 
   final Function toggleView;
   SignIn({this.toggleView});
@@ -43,7 +43,7 @@ class _SignInState extends State<SignIn> {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/loginbackground.jpg'),
+          image: AssetImage('assets/bggg.jpg'),
           fit: BoxFit.cover,
         ),
       ),
@@ -86,7 +86,7 @@ class _SignInState extends State<SignIn> {
 
                                     Padding(padding: EdgeInsets.only(top: 140.0)),
                                         Text('Login to The Hospitality App',
-                                        style: TextStyle(color: hexToColor("#ffffff"), fontSize: 25.0),),
+                                        style: TextStyle(color: hexToColor("#000000"), fontSize: 25.0),),
                                         Padding(padding: EdgeInsets.only(top: 50.0)
                                     ),
 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:nice_button/NiceButton.dart';
 
+import 'ActivitiesPage.dart';
 import 'BookingPage.dart';
 import 'LoginAndRegister/LoginPage.dart';
 import 'MainPage.dart';
@@ -106,7 +107,7 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
             },
           ),
         ],
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.lightBlueAccent,
         elevation: 1.0,
         title: const Text('Details Page'),
       ),
@@ -199,7 +200,7 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
                                     onPressed: () {
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) => BookingPage()),
+                                        MaterialPageRoute(builder: (context) => bookSpot()),
                                       );
                                     },
                                   ),

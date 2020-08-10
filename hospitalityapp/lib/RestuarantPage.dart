@@ -104,7 +104,7 @@ class _RestuarantPageClassState extends State<RestuarantPageClass> with TickerPr
             },
           ),
         ],
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.lightBlueAccent,
         elevation: 1.0,
         title: const Text('Restuarants Page'),
       ),
