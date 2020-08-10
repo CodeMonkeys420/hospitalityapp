@@ -47,7 +47,7 @@ class _ActivitiesPageClassState extends State<ActivitiesPageClass> {
               },
             ),
           ],
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.lightBlueAccent,
           elevation: 1.0,
           title: const Text('Activities'),
         ),
@@ -204,7 +204,7 @@ class _ActivitiesDetails extends State<ActivitiesDetails> {
         actions: <Widget>[
 
         ],
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.lightBlueAccent,
         elevation: 1.0,
         title: const Text('Activity Details'),
       ),
@@ -455,7 +455,7 @@ class bookSpotState extends State<bookSpot> {
             actions: <Widget>[
 
             ],
-            backgroundColor: Colors.deepPurple,
+            backgroundColor: Colors.lightBlueAccent,
             elevation: 1.0,
             title: const Text('Booking Page'),
           ),
@@ -465,7 +465,7 @@ class bookSpotState extends State<bookSpot> {
                   children: <CardSettingsSection>[
                     CardSettingsSection(
                       header: CardSettingsHeader(
-                        color: Colors.blue,
+                        color: Colors.lightBlueAccent,
                         label: 'Personal Information',
                       ),
                       children: <CardSettingsWidget>[

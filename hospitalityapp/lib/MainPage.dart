@@ -28,7 +28,7 @@ class MainPageClass extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/mainbackground.jpg'),
+          image: AssetImage('assets/bggg.jpg'),
           fit: BoxFit.cover,
         ),
       ),

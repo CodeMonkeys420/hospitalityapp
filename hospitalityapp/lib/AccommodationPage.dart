@@ -45,7 +45,7 @@ class _AccommodationPageClassState extends State<AccommodationPageClass> {
               },
             ),
           ],
-          backgroundColor: Colors.deepPurple,
+          backgroundColor: Colors.lightBlueAccent,
           elevation: 1.0,
           title: const Text('Accommodation Page'),
         ),
