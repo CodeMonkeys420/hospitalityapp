@@ -12,7 +12,7 @@ class BookingPage extends StatelessWidget {
     return new MaterialApp(
       title: 'Booking Page',
       theme: new ThemeData(
-        primarySwatch: Colors.deepPurple,
+        primarySwatch: Colors.lightBlue,
       ),
       home: new BookingPageClass(title: 'Booking Page'),
     );
@@ -105,7 +105,7 @@ class _BookingPageClassState extends State<BookingPageClass> with TickerProvider
             },
           ),
         ],
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.lightBlueAccent,
         elevation: 1.0,
         title: const Text('Booking Page'),
       ),
